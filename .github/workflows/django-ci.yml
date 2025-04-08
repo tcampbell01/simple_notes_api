@@ -18,7 +18,7 @@ jobs:
           MYSQL_DATABASE: notes_db
           MYSQL_USER: test_user
           MYSQL_PASSWORD: test_password
-          MYSQL_ROOT_PASSWORD: 3"GalenRobert202!"
+          MYSQL_ROOT_PASSWORD: "GalenRobert2023!"
         ports:
           - 3306:3306
         options: >-
@@ -39,7 +39,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r [requirements.txt](http://_vscodecontentref_/1)
+        pip install -r requirements.txt
         pip install pytest pytest-django
 
     - name: Wait for MySQL
