@@ -41,6 +41,3 @@ class TestNoteModel:
         sample_note.delete()
         with pytest.raises(Note.DoesNotExist):
             Note.objects.get(id=note_id)
-
-
-
