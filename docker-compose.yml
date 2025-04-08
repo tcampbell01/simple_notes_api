@@ -3,7 +3,7 @@ services:
     image: mysql:8.0
     environment:
       MYSQL_DATABASE: notes_db
-      MYSQL_ROOT_PASSWORD: your_root_password
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     volumes:
       - mysql_data:/var/lib/mysql
 
@@ -19,3 +19,4 @@ services:
 
 volumes:
   mysql_data:
+
