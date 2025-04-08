@@ -18,7 +18,7 @@ jobs:
           MYSQL_DATABASE: notes_db
           MYSQL_USER: test_user
           MYSQL_PASSWORD: test_password
-          MYSQL_ROOT_PASSWORD: "GalenRobert2023!"
+          MYSQL_ROOT_PASSWORD: 3"GalenRobert202!"
         ports:
           - 3306:3306
         options: >-
@@ -39,7 +39,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        pip install -r [requirements.txt](http://_vscodecontentref_/1)
         pip install pytest pytest-django
 
     - name: Wait for MySQL
@@ -53,12 +53,12 @@ jobs:
       env:
         DATABASE_URL: mysql://test_user:test_password@127.0.0.1:3306/notes_db
       run: |
-        cd simple_notes_api/app
+        cd app
         python manage.py migrate
 
     - name: Run tests
       env:
         DATABASE_URL: mysql://test_user:test_password@127.0.0.1:3306/notes_db
       run: |
-        cd simple_notes_api/app
+        cd app
         pytest
