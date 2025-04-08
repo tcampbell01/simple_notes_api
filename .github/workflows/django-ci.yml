@@ -32,6 +32,11 @@ jobs:
       with:
         python-version: '3.9'
 
+    - name: Debug secrets
+      run: echo "MYSQL_ROOT_PASSWORD is set"
+      env:
+        MYSQL_ROOT_PASSWORD: ${{ secrets.MYSQL_ROOT_PASSWORD }}
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
